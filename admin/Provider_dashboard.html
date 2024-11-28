@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mani Cable Network - Areas</title>
+    <style>
+      /* General Styles */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: white;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      /* Sidebar Styles */
+      .sidebar {
+        width: 250px;
+        background-color: #0048ff;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        width: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      .sidebar-btn {
+        background-color: #fff;
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: left;
+      }
+
+      .sidebar-btn:hover {
+        background-color: #d1d1d1;
+      }
+
+      /* Main Content Styles */
+      .main-content {
+        flex-grow: 1;
+        padding: 20px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .search-bar {
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .header-actions span {
+        font-size: 16px;
+      }
+
+      .areas-title {
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      .areas-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .area-card {
+        background-color: #0048ff;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .area-card:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <button class="sidebar-btn">Areas</button>
+        <button class="sidebar-btn">Activations</button>
+        <button class="sidebar-btn">Requests</button>
+        <button class="sidebar-btn">Amount</button>
+        <button class="sidebar-btn">Help</button>
+        <button class="sidebar-btn">Login</button>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+          <h1>Mani Cable Network</h1>
+          <div class="header-actions">
+            <input type="text" placeholder="Search" class="search-bar" />
+            <i class="bell-icon">🔔</i>
+            <span class="profile-name">shrig</span>
+          </div>
+        </header>
+
+        <!-- Areas Section -->
+        <section>
+          <h2 class="areas-title">Areas</h2>
+          <div class="areas-grid">
+            <div class="area-card">Area 1</div>
+            <div class="area-card">Area 2</div>
+            <div class="area-card">Area 3</div>
+            <div class="area-card">Area 4</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

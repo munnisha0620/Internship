@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mani Cable Network</title>
+    <style>
+      /* General Styles */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: white;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      /* Sidebar Styles */
+      .sidebar {
+        width: 250px;
+        background-color: #0048ff;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        width: 150px;
+        border-radius: 50%;
+      }
+
+      .dashboard-btn {
+        margin-top: 20px;
+        background-color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      /* Main Content Styles */
+      .main-content {
+        flex-grow: 1;
+        padding: 20px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .search-bar {
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .customer-details {
+        margin-bottom: 20px;
+      }
+
+      .details-box {
+        background-color: #0048ff;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 18px;
+      }
+
+      .details-box p {
+        margin: 10px 0;
+      }
+
+      .transactions h2 {
+        margin-bottom: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+      }
+
+      table th,
+      table td {
+        border: 1px solid #fff;
+        padding: 10px;
+      }
+
+      .done-btn {
+        background-color: #000;
+        color: #fff;
+        padding: 5px 10px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .done-btn:hover {
+        background-color: #0048ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <button class="dashboard-btn">User Dashboard</button>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+          <h1>Mani Cable Network</h1>
+          <div class="header-actions">
+            <input type="text" placeholder="Search" class="search-bar" />
+            <i class="bell-icon">🔔</i>
+            <span class="profile-name">shrig</span>
+          </div>
+        </header>
+
+        <!-- Customer Details -->
+        <section class="customer-details">
+          <h2>Customer Details</h2>
+          <div class="details-box">
+            <p>Box ID: <span>2145766627</span></p>
+            <p>Name: <span>Mani</span></p>
+            <p>Area: <span>Kendriya</span></p>
+            <p>Phone: <span>8575748758</span></p>
+          </div>
+        </section>
+
+        <!-- Previous Transactions -->
+        <section class="transactions">
+          <h2>Previous Transaction</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Package</th>
+                <th>Month</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Due</th>
+                <th>Transaction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>All Telugu</td>
+                <td>October</td>
+                <td>2024-10-08</td>
+                <td>300</td>
+                <td>0</td>
+                <td><button class="done-btn">Done</button></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>All Tamil</td>
+                <td>March</td>
+                <td>2024-11-06</td>
+                <td>500</td>
+                <td>0</td>
+                <td><button class="done-btn">Done</button></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Kids Pack Special</td>
+                <td>March</td>
+                <td>2024-11-14</td>
+                <td>100</td>
+                <td>0</td>
+                <td><button class="done-btn">Done</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

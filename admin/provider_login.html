@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Provider Login</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 1400px;
+        height: 100vh;
+        gap: 30px;
+      }
+
+      .image-container {
+        flex: 1;
+        background-image: url("https://www.microsoft.com/en-us/research/uploads/prod/2018/08/01_MSR_SIGCOMM_Data_Network_1400x788.png"); /* Example background image */
+        background-size: cover;
+        background-position: center;
+        width: 90%;
+        max-width: 1300px;
+        height: 90vh;
+      }
+
+      .login-box {
+        flex: 1;
+        background: linear-gradient(135deg, #000000, #000000);
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        margin-left: 20px;
+        max-width: 1300px;
+        width: 90%;
+        height: 90vh;
+      }
+
+      .login-box h2 {
+        color: #5176f3;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      .login-box label {
+        width: 80%;
+        color: #aaa;
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: left;
+      }
+
+      .login-box input[type="text"],
+      .login-box input[type="password"] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 5px 0 15px;
+        border-radius: 999px;
+        border: 2px solid #fff;
+        background-color: #333;
+        color: #fff;
+        font-size: 16px;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      .login-box input[type="text"]:focus,
+      .login-box input[type="password"]:focus {
+        border-color: #5176f3;
+        background-color: #444;
+        box-shadow: 0 0 10px rgba(81, 118, 243, 0.5);
+        transform: scale(1.05);
+      }
+
+      .login-box input[type="text"]::placeholder,
+      .login-box input[type="password"]::placeholder {
+        color: #aaa;
+        transition: all 0.3s ease;
+      }
+
+      .login-box input[type="text"]:focus::placeholder,
+      .login-box input[type="password"]:focus::placeholder {
+        color: #5176f3;
+        font-size: 12px;
+        transform: translateY(-10px);
+      }
+
+      .login-box button {
+        position: relative;
+        width: 50%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 999px;
+        background-color: #5176f3;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .login-box button:hover {
+        background-color: #1a2446;
+        transform: scale(1.1);
+      }
+
+      .login-box button:active::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        animation: ripple 0.6s linear;
+        pointer-events: none;
+      }
+
+      @keyframes ripple {
+        to {
+          width: 300px;
+          height: 300px;
+          opacity: 0;
+        }
+      }
+
+      .login-box p {
+        margin-top: 20px;
+        color: #aaa;
+      }
+
+      .login-box a {
+        color: #5176f3;
+        text-decoration: none;
+      }
+
+      .login-box a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container"></div>
+      <div class="login-box">
+        <h2>Provider Login</h2>
+        <form action="provider_login.php" method="POST">
+          <input type="text" name="username" placeholder="Username" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        <p>
+          Don't have an Account? <a href="Provider_register.html">Register</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
